@@ -30,8 +30,6 @@
     
   </div>
 
-  <p class="github_link"><a href="https://github.com/yann-spadari/moduleconnexion">Retrouvez le projet sur Github</a></p>.
-
   <!--Import du footer -->
 
   <?php include('includes/footer.php'); ?>

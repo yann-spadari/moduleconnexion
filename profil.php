@@ -114,8 +114,9 @@ if(isset($_POST) AND !empty($_POST) ) {
 
             // Si mise à jour 'Prénom et Nom' réussie
 
-            echo '<div class= "success_php">' . "Vos données ont été modifiées." . "</br>" . '</div>';
-
+            // echo '<div class= "success_php">' . "Vos données ont été modifiées." . "</br>" . '</div>';
+			
+			header("Refresh:0");
         }
 
         else {

@@ -10,7 +10,7 @@
     <li><a href="#">Conditions d'utilisation</a></li>
     <li><a href="#">Contact</a></li>
     <li><a href="#">Statut</a></li>
-    <li><a href="https://github.com/yann-spadari/moduleconnexion">Github</a></li>
+    <li><a href="https://github.com/yann-spadari/moduleconnexion">Projet sur Github</a></li>
   </ul>
 
 </nav>
