@@ -44,7 +44,7 @@ if (!isset($_SESSION['id']))
 
 <?php include('includes/user_header.php'); ?>
 
-<div class="user_profil">
+
     
     <?php
 
@@ -56,38 +56,43 @@ if (!isset($_SESSION['id']))
     $row = $check->rowCount();
 
     ?>
-
-    <form action="" method="POST">
-        <h1 class="profil_text">Espace Membre</h1>
-        <h2>Hello <?php echo $_SESSION['login']; ?> !</h2>
-        
-        <div class="form_container">
-        <input type="text" class="form_input" name="prenom" id="prenom" required="required" autocomplete="off" value=<?php echo $data['prenom']; ?>>
-        </div>
-        
-        <div class="form_container">
-        <input type="text" class="form_input" name="nom" id="nom" required="required" autocomplete="off" value=<?php echo $data['nom']; ?>>
-        </div>
-        
-        <div class="form_container">
-        <input type="password" class="form_input" name="current_password" id="current_password" placeholder="Mot de passe actuel" required="required" autocomplete="off">
-        </div>
-        
-        <div class="form_container">
-        <input type="password" class="form_input" name="password" id="password" placeholder="Nouveau mot de passe" autocomplete="off"; ?>
-        </div>
-
-        <div class="form_container">
-        <input type="password" class="form_input" name="cpassword" id="cpassword" placeholder="Retapez le mot de passe" autocomplete="off">
-        </div>
-        
-        <div class="form_container">
-        <input type="submit" class="btn" name="formsend" id="formsend" value="Sauvegarder">
-        </div>    
     
-    </form>
+    <div class="user_profil">
+        
+        <form action="" method="POST">
+          
+            <h1 class="profil_text">Espace Membre</h1>
+            <h2>Hello <?php echo $_SESSION['login']; ?> !</h2>
+            <p class="text-form">Modifier votre profil, c'est facile !</p>
+            <p class="text-form2">Changer son mot de passe nécessite une ré-authentification.</p>
+            
+            <div class= form_group>
+            <div id="form_container">
+            <input type="text" class="form_input" name="prenom" id="prenom" required="required" autocomplete="off" value=<?php echo $data['prenom']; ?>>
+            </div>
+            
+            <div class="form_container">
+            <input type="text" class="form_input" name="nom" id="nom" required="required" autocomplete="off" value=<?php echo $data['nom']; ?>>
+            </div>
+            
+            <div class="form_container">
+            <input type="password" class="form_input" name="current_password" id="current_password" placeholder="Mot de passe actuel" required="required" autocomplete="off">
+            </div>
+            
+            <div class="form_container">
+            <input type="password" class="form_input" name="password" id="password" placeholder="Nouveau mot de passe" autocomplete="off"; ?>
+            </div>
 
+            <div class="form_container">
+            <input type="password" class="form_input" name="cpassword" id="cpassword" placeholder="Retapez le mot de passe" autocomplete="off">
+            </div>
+            
+            <div class="form_container">
+            <input type="submit" class="btn" name="formsend" id="formsend" value="Sauvegarder">
+            </div>    
+        </form>
 </div>
+    </div>
 
 <?php
 
@@ -116,7 +121,7 @@ if(isset($_POST) AND !empty($_POST) ) {
 
             // echo '<div class= "success_php">' . "Vos données ont été modifiées." . "</br>" . '</div>';
 			
-			header("Refresh:0");
+			header("Location:modification.php?=data_saved");
         }
 
         else {
@@ -155,7 +160,7 @@ if(isset($_POST) AND !empty($_POST) ) {
                 // Si mise à jour 'Mot de passe' réussie
 
                 // echo '<div class= "success_php">' . "Votre mot de passe a été modifié." . '</div>';
-
+                
                 header('Location: connexion.php?=password_changed');
                 die();
 

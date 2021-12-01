@@ -85,6 +85,18 @@ header ul li a:hover {
             display: flex;
             align-items: center;
         }
+
+        form input[type="text"], input[type="password"], [type="submit"]{
+            padding: 2px 17px;
+            color: black;
+            border-radius: 12px;
+            border: solid 0.25rem;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+            text-align: center;
+        }
+        
     }
 }
+
 
