@@ -31,7 +31,7 @@ form {
 }
 
 .text-form2 {
-    font-size: 1.23rem;
+    font-size: 1.4rem;
 }
 
 form h1 {
@@ -75,7 +75,7 @@ form input[type="text"], input[type="password"], [type="submit"]{
 
 form p {
     text-align: center;
-    font-size: 2.4rem;
+    font-size: 2rem;
     margin-top: 1rem;
     margin-bottom: 1.5rem;
 }
